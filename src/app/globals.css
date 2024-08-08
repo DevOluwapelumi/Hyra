@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply my-12 text-2xl font-bold md:text-5xl text-slate-900;
+  }
+
+  h2 {
+    @apply text-xl font-bold md:text-3xl;
+  }
+
+  p {
+    @apply text-sm font-normal leading-normal tracking-wide md:text-xl text-slate-800;
+  }
+
+  .form-label {
+    @apply block mb-2 text-sm font-medium md:text-lg text-slate-800;
+  }
+
+  .form-input {
+    @apply w-full px-4 text-sm font-normal border rounded-md h-14 md:text-lg text-slate-800 border-secondary-100 focus:ring-secondary-100 focus-visible:ring-0 focus:border-2 focus:border-secondary-100;
+  }
+
+  .form-btn {
+    @apply w-full font-bold transition rounded-md h-14 hover:opacity-80;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .not-found {
+    height: 80vh !important;
+  }
+}
